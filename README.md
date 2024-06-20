@@ -1,4 +1,4 @@
-# AnimalClassification
+# Animal Classification Flask Web App
 
 ## Overview
 This project is a web application built using Flask that classifies animals based on uploaded images. The app leverages a machine learning model trained on the [Animal Data](https://www.kaggle.com/datasets/likhon148/animal-data) dataset from Kaggle. 
