@@ -1,0 +1,74 @@
+/* Static CSS styles for the Flask application */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.description {
+    text-align: center;
+    margin-bottom: 20px;
+    font-style: italic;
+    color: #555;
+}
+
+form {
+    margin-top: 20px;
+    text-align: center;
+}
+
+input[type="file"] {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+h3 {
+    margin-top: 20px;
+    text-align: center;
+    color: #333;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    max-width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}

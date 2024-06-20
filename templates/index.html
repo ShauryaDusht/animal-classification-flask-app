@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Animal Classifier</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Animal Classifier</h1>
+        <p class="description">Classifies animal into classes: zebra, tiger, panda, lion, kangaroo, horse, giraffe, dolphin, dog, deer, cow, cat, bird, bear, elephant</p>
+        <h3>Upload an Image to Classify</h3>
+        <form method="post" enctype="multipart/form-data">
+            <input type="file" name="file">
+            <input type="submit" value="Upload">
+        </form>
+        {% if class_name %}
+        <h3>Predicted animal: {{ class_name }}</h3>
+        <img src="{{ url_for('static', filename=file_path) }}" alt="Uploaded Image">
+        {% endif %}
+    </div>
+</body>
+
+</html>
