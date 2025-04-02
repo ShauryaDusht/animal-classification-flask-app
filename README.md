@@ -6,7 +6,10 @@
 [![PyTorch](https://img.shields.io/badge/PyTorch-Latest-red.svg)](https://pytorch.org/)
 
 > Transform your animal image classification experience with our powerful Flask web application! Upload and instantly classify animals using state-of-the-art machine learning.
+## Live Demo
 
+The application is deployed and can be accessed at:
+[https://animal-classification-flask-app-cddr5rfeqqgrazlrtappiyu.streamlit.app](https://animal-classification-flask-app-cddr5rfeqqgrazlrtappiyu.streamlit.app)
 
 ## ✨ **Key Features**
 
