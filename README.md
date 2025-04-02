@@ -4,6 +4,7 @@
 [![Flask](https://img.shields.io/badge/Flask-Latest-green.svg)](https://flask.palletsprojects.com/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![PyTorch](https://img.shields.io/badge/PyTorch-Latest-red.svg)](https://pytorch.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-Latest-brightred.svg)](https://streamlit.io/)
 
 > Transform your animal image classification experience with our powerful Flask web application! Upload and instantly classify animals using state-of-the-art machine learning.
 ## Live Demo
@@ -44,10 +45,11 @@ AnimalClassification/
 ├── static/
 │   └── styles.css
 ├── templates/
-│   ├── index.html
-│   └── result.html
+│   └── index.html
+│ 
 ├── animal_classifier.pkl
 ├── app.py
+├── streamlit_app.py
 └── requirements.txt
 ```
 
