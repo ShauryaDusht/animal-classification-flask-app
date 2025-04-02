@@ -9,7 +9,7 @@
 ## Live Demo
 
 The application is deployed and can be accessed at:
-[https://animal-classification-flask-app-cddr5rfeqqgrazlrtappiyu.streamlit.app](https://animal-classification-flask-app-cddr5rfeqqgrazlrtappiyu.streamlit.app)
+[https://animal-classification-flask-app-yay48qunbup3unge4g6fkx.streamlit.app](https://animal-classification-flask-app-yay48qunbup3unge4g6fkx.streamlit.app)
 
 ## ✨ **Key Features**
 
