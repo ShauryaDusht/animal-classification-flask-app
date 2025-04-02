@@ -3,13 +3,20 @@ import streamlit as st
 import torch
 from torchvision import transforms, models
 from PIL import Image
-import matplotlib.pyplot as plt
 
-# Create static directory if it doesn't exist
-os.makedirs('static', exist_ok=True)
-
-# Set page title
+# Set page title and configure page
 st.set_page_config(page_title="Animal Classifier", layout="wide")
+
+# Apply custom CSS for fixed image size
+st.markdown("""
+<style>
+.uploaded-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+</style>
+""", unsafe_allow_html=True)
 
 # Define the device
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
@@ -48,9 +55,9 @@ def predict(image):
         return -1
     
     try:
-        image = transform(image).unsqueeze(0).to(device)
+        image_tensor = transform(image).unsqueeze(0).to(device)
         with torch.no_grad():
-            outputs = model(image)
+            outputs = model(image_tensor)
             _, predicted = torch.max(outputs, 1)
         return predicted.item()
     except Exception as e:
@@ -65,9 +72,19 @@ uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png
 
 if uploaded_file is not None:
     try:
-        # Display the image
+        # Load the image
         image = Image.open(uploaded_file)
-        st.image(image, caption='Uploaded Image', use_column_width=True)
+        
+        # Convert to HTML img tag with the custom class
+        from io import BytesIO
+        import base64
+        
+        buffer = BytesIO()
+        image.save(buffer, format="PNG")
+        img_str = base64.b64encode(buffer.getvalue()).decode()
+        
+        # Display the image with fixed size using HTML
+        st.markdown(f'<img src="data:image/png;base64,{img_str}" class="uploaded-image" alt="Uploaded Image">', unsafe_allow_html=True)
         
         # Add a prediction button
         if st.button('Classify'):
